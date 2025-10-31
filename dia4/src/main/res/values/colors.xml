@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MercaStock brand colors -->
+    <color name="merca_green">#2E7D32</color>
+    <color name="merca_light_green">#66BB6A</color>
+    <color name="merca_dark_green">#1B5E20</color>
+    <color name="merca_orange">#FF6F00</color>
+    <color name="merca_light_orange">#FFB74D</color>
+    
+    <!-- Standard colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_medium">#9E9E9E</color>
+    <color name="gray_dark">#424242</color>
+    
+    <!-- Status colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+    <color name="info_blue">#2196F3</color>
+</resources>

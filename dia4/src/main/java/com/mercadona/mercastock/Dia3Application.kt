@@ -1,0 +1,7 @@
+package com.mercadona.mercastock
+
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class Dia3Application : Application()

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dia 3</string>
+    
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_help">Ayuda</string>
+    <string name="nav_products">Productos</string>
+    <string name="nav_add_product">Añadir Producto</string>
+    <string name="navigate_back">Volver</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard - Inventario</string>
+    <string name="dashboard_total_products">Total Productos</string>
+    <string name="dashboard_low_stock">Stock Bajo</string>
+    <string name="dashboard_out_of_stock">Sin Stock</string>
+    <string name="dashboard_total_value">Valor Total</string>
+    
+    <!-- Products -->
+    <string name="products_title">Lista de Productos</string>
+    <string name="product_detail_title">Detalle del Producto</string>
+    <string name="search_products">Buscar productos...</string>
+    <string name="filter_by_category">Filtrar por categoría</string>
+    <string name="sort_by">Ordenar por</string>
+    
+    <!-- Product Details -->
+    <string name="product_stock">Stock: %1$d</string>
+    <string name="product_price">%1$s</string>
+    <string name="product_category">Categoría: %1$s</string>
+    <string name="product_supplier">Proveedor: %1$s</string>
+    <string name="product_barcode">Código de barras: %1$s</string>
+    <string name="product_low_stock_warning">¡Stock bajo!</string>
+    <string name="product_out_of_stock_warning">¡Sin stock!</string>
+    
+    <!-- Actions -->
+    <string name="action_add">Añadir</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_filter">Filtrar</string>
+    <string name="action_back">Volver</string>
+    
+    <!-- Messages -->
+    <string name="loading">Cargando...</string>
+    <string name="error_generic">Ha ocurrido un error</string>
+    <string name="error_network">Error de conexión</string>
+    <string name="no_products_found">No se encontraron productos</string>
+    <string name="product_added_success">Producto añadido correctamente</string>
+    <string name="product_updated_success">Producto actualizado correctamente</string>
+    <string name="product_deleted_success">Producto eliminado correctamente</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_product_image">Imagen del producto</string>
+    <string name="cd_search_icon">Icono de búsqueda</string>
+    <string name="cd_filter_icon">Icono de filtro</string>
+    <string name="cd_back_button">Botón volver</string>
+    <string name="cd_add_button">Botón añadir</string>
+    
+    <!-- Día 3 - Navegación y arquitectura -->
+    <string name="dia3_title">Día 3 - Navegación</string>
+    
+    <!-- Help Section -->
+    <string name="help_title">Ayuda y Soporte</string>
+    <string name="help_main_title">Centro de Ayuda</string>
+    <string name="help_welcome">¿En qué podemos ayudarte?</string>
+    <string name="help_contact_title">Contacto</string>
+    <string name="help_faq_title">Preguntas Frecuentes</string>
+    <string name="help_legal_title">Información Legal</string>
+    
+    
+    <!-- FAQ Screen -->
+    <string name="faq_question_1">¿Cómo añado un nuevo producto?</string>
+    <string name="faq_answer_1">Pulsa el botón "+" en el dashboard o en la lista de productos.</string>
+    <string name="faq_question_2">¿Cómo edito un producto existente?</string>
+    <string name="faq_answer_2">Ve al detalle del producto y pulsa el icono de edición.</string>
+    <string name="faq_question_3">¿Cómo navego entre pantallas?</string>
+    <string name="faq_answer_3">Usa los botones de navegación y el botón atrás del sistema.</string>
+    
+    <!-- Legal Screen -->
+    <string name="legal_privacy_title">Política de Privacidad</string>
+    <string name="legal_privacy_text">Esta aplicación es un ejemplo educativo para aprender Jetpack Compose.</string>
+    <string name="legal_terms_title">Términos de Uso</string>
+    <string name="legal_terms_text">Aplicación desarrollada con fines educativos en el programa de formación de Mercadona.</string>
+    <string name="legal_version">Versión: 1.0 - Día 3</string>
+    <string name="dia3_welcome">Bienvenido a MercaStock</string>
+    <string name="dia3_view_products">Ver Productos</string>
+    <string name="dia3_view_help">Ayuda y Soporte</string>
+    <string name="dia3_day_info">💡 Día 3: Navegación y Arquitectura</string>
+    <string name="dia3_product_list_title">Lista de Productos</string>
+    <string name="dia3_product_info">Información del Producto</string>
+    <string name="dia3_add_product_title">Añadir Producto</string>
+    <string name="dia3_product_name_label">Nombre del producto</string>
+    <string name="dia3_price_label">Precio</string>
+    <string name="dia3_stock_label">Stock</string>
+    <string name="dia3_save_product">Guardar Producto</string>
+    <string name="dia3_navigation_args_tip">💡 Argumentos pasados por navegación</string>
+    <string name="dia3_optional_args_tip">💡 Navegación con argumentos opcionales</string>
+    <string name="dia3_product_name_format">Nombre: %1$s</string>
+    <string name="dia3_product_price_format">Precio: %1$.2f€</string>
+    <string name="dia3_product_stock_format">Stock: %1$d unidades</string>
+    <string name="dia3_product_price_simple">Precio: %1$.2f€</string>
+    
+    <!-- Exercise Selection -->
+    <string name="dia3_exercise_navigation">Ejercicio 1: Navegación Básica</string>
+    <string name="dia3_exercise_arguments">Ejercicio 2: Argumentos de Navegación</string>
+    <string name="dia3_exercise_architecture">Ejercicio 3: Arquitectura Limpia</string>
+    <string name="dia3_exercise_patterns">Ejercicio 4: Patrones de Navegación</string>
+    <string name="dia3_exercise_incomplete">Ejercicios Incompletos</string>
+    
+    <!-- Content Descriptions for Dia3 -->
+    <string name="cd_add_product">Añadir Producto</string>
+    <string name="cd_back">Volver</string>
+    <string name="cd_edit">Editar</string>
+    
+    <!-- Error Messages -->
+    <string name="error_loading_products">Error al cargar productos: %1$s</string>
+    <string name="error_product_not_found">Producto no encontrado</string>
+    <string name="error_loading_product">Error al cargar el producto: %1$s</string>
+    <string name="error_updating_product">Error al actualizar el producto</string>
+    <string name="error_saving_product">Error al guardar el producto: %1$s</string>
+    
+    <!-- Validation Messages -->
+    <string name="validation_price_invalid">El precio debe ser un número válido</string>
+    <string name="validation_current_stock_invalid">El stock actual debe ser un número válido</string>
+    <string name="validation_min_stock_invalid">El stock mínimo debe ser un número válido</string>
+    <string name="validation_max_stock_invalid">El stock máximo debe ser un número válido</string>
+    
+    <!-- Form Labels -->
+    <string name="form_basic_info">Información Básica</string>
+    <string name="form_price_stock">Precio y Stock</string>
+    <string name="form_additional_info">Información Adicional</string>
+    <string name="form_product_name">Nombre del producto *</string>
+    <string name="form_description">Descripción</string>
+    <string name="form_category">Categoría</string>
+    <string name="form_supplier">Proveedor</string>
+    <string name="form_price_euro">Precio (€) *</string>
+    <string name="form_current_stock">Stock actual *</string>
+    <string name="form_min_stock">Stock mínimo *</string>
+    <string name="form_max_stock">Stock máximo *</string>
+    <string name="form_barcode">Código de barras</string>
+    <string name="form_required_fields">Los campos marcados con * son obligatorios</string>
+    <string name="form_save_product">Guardar Producto</string>
+    
+    <!-- UI States -->
+    <string name="ui_error_title">Error</string>
+    <string name="ui_retry">Reintentar</string>
+    <string name="ui_ok">OK</string>
+    <string name="ui_edit_product">Editar Producto</string>
+    
+    <!-- Product Detail -->
+    <string name="product_detail_info">Información del Producto</string>
+    <string name="product_detail_stock_management">Gestión de Stock</string>
+    <string name="product_detail_registration_info">Información de Registro</string>
+    <string name="product_detail_name">Nombre</string>
+    <string name="product_detail_description">Descripción</string>
+    <string name="product_detail_category">Categoría</string>
+    <string name="product_detail_supplier">Proveedor</string>
+    <string name="product_detail_barcode">Código de barras</string>
+    <string name="product_detail_price">Precio</string>
+    <string name="product_detail_current_stock">Stock actual</string>
+    <string name="product_detail_min_stock">Stock mínimo</string>
+    <string name="product_detail_max_stock">Stock máximo</string>
+    <string name="product_detail_created_at">Creado el</string>
+    <string name="product_detail_updated_at">Actualizado el</string>
+    <string name="product_detail_no_description">Sin descripción</string>
+    <string name="product_detail_no_supplier">Sin proveedor</string>
+    <string name="product_detail_no_barcode">Sin código de barras</string>
+    
+    <!-- Exercise Selector -->
+    <string name="dia3_exercise_selector_title">Selecciona un ejercicio:</string>
+    
+    <!-- Exercise Instructions -->
+    <string name="exercise_type_safe_navigation_title">Ejercicio 1: Type-Safe Navigation</string>
+    <string name="exercise_type_safe_navigation_desc">Implementa navegación type-safe con Kotlin Serialization</string>
+    <string name="exercise_clean_architecture_title">Ejercicio 2: Clean Architecture</string>
+    <string name="exercise_clean_architecture_desc">Implementa ViewModels, UseCases y Repository con Hilt DI</string>
+    <string name="exercise_nested_navigation_title">Ejercicio 3: Navegación Anidada</string>
+    <string name="exercise_nested_navigation_desc">Crea subgrafos de navegación para secciones relacionadas</string>
+    <string name="exercise_reactive_ui_title">Ejercicio 4: UI Reactiva</string>
+    <string name="exercise_reactive_ui_desc">Implementa UI reactiva con StateFlow y estados de carga</string>
+    
+    <!-- Exercise Screen Strings -->
+    <string name="dia3_exercises_navigation_title">Ejercicios Día 3</string>
+    <string name="dia3_exercises_overview_title">Conceptos del Día 3</string>
+    <string name="dia3_exercises_overview_desc">En este día has aprendido navegación type-safe, Clean Architecture con Hilt DI, y UI reactiva con StateFlow.</string>
+    <string name="dia3_exercises_next_steps_title">Próximos Pasos</string>
+    <string name="dia3_exercises_next_steps_desc">Continúa practicando estos conceptos y explora los ejercicios incompletos para reforzar tu aprendizaje.</string>
+    <string name="difficulty_beginner">Principiante</string>
+    <string name="difficulty_intermediate">Intermedio</string>
+    <string name="difficulty_advanced">Avanzado</string>
+    <string name="exercise_completed">Completado</string>
+    
+    <!-- Dia3 Exercises Tabs -->
+    <string name="dia3_tab_overview">Resumen</string>
+    <string name="dia3_tab_implementation">Implementación</string>
+    <string name="dia3_tab_exercises">Ejercicios</string>
+    <string name="dia3_exercises_title">Día 3: Navegación y Arquitectura</string>
+    
+    <!-- Learning Objectives -->
+    <string name="objective_type_safe_navigation">Type-Safe Navigation</string>
+    <string name="objective_type_safe_navigation_desc">Navegación segura con Kotlin Serialization y Compose Navigation 2.8</string>
+    <string name="objective_clean_architecture">Clean Architecture</string>
+    <string name="objective_clean_architecture_desc">Separación de capas con Repository, UseCases y ViewModels</string>
+    <string name="objective_dependency_injection">Dependency Injection</string>
+    <string name="objective_dependency_injection_desc">Inyección de dependencias con Hilt para mejor testabilidad</string>
+    <string name="objective_reactive_ui">UI Reactiva</string>
+    <string name="objective_reactive_ui_desc">Estados reactivos con StateFlow y manejo de Loading/Success/Error</string>
+    <string name="objective_form_validation">Validación de Formularios</string>
+    <string name="objective_form_validation_desc">Validación en tiempo real y manejo de errores de usuario</string>
+    <string name="objective_nested_navigation">Navegación Anidada</string>
+    <string name="objective_nested_navigation_desc">Subgrafos de navegación para organizar secciones relacionadas</string>
+    
+    <!-- Welcome Section -->
+    <string name="dia3_welcome_title">¡Bienvenido al Día 3!</string>
+    <string name="dia3_welcome_desc">Hoy aprenderás conceptos avanzados de navegación y arquitectura en Jetpack Compose. Estos son los fundamentos para crear aplicaciones robustas y escalables.</string>
+    
+    <!-- Key Concepts -->
+    <string name="dia3_key_concepts_title">Conceptos Clave</string>
+    <string name="dia3_key_concepts_desc">La combinación de navegación type-safe, Clean Architecture y Hilt DI te permitirá crear aplicaciones mantenibles y testeable. Estos patrones son estándar en la industria.</string>
+    
+    <!-- Implementation -->
+    <string name="dia3_implementation_title">Implementación Completa</string>
+    <string name="dia3_implementation_note_title">Nota sobre la Implementación</string>
+    <string name="dia3_implementation_note_desc">Esta es la aplicación completa que has construido hoy. Incluye todas las mejores prácticas de desarrollo Android moderno con Jetpack Compose.</string>
+    
+    <!-- Incomplete Exercises -->
+    <string name="incomplete_exercises_menu_title">Ejercicios Incompletos - Día 3</string>
+    <string name="incomplete_exercises_welcome_title">Practica y Aprende</string>
+    <string name="incomplete_exercises_welcome_desc">Selecciona un ejercicio para practicar los conceptos del día 3. Cada ejercicio está diseñado para reforzar tu aprendizaje paso a paso.</string>
+    <string name="incomplete_exercises_tips_title">Consejos para los Ejercicios</string>
+    <string name="incomplete_exercises_tips_desc">• Lee las instrucciones cuidadosamente\n• Sigue los pasos en orden\n• Consulta los ejemplos de código\n• No dudes en experimentar</string>
+    
+    <!-- Exercise Descriptions -->
+    <string name="incomplete_navigation_exercise_desc">Aprende a implementar navegación type-safe desde cero con ejemplos paso a paso y código guiado.</string>
+    <string name="incomplete_original_exercises_title">Ejercicios Básicos</string>
+    <string name="incomplete_original_exercises_desc">Ejercicios fundamentales con TODOs para completar navegación básica y UI simple.</string>
+    
+    <!-- Exercise Instructions -->
+    <string name="exercise_instructions_title">Instrucciones</string>
+    <string name="navigation_exercise_instructions">Sigue estos pasos para implementar navegación type-safe en tu aplicación. Cada paso incluye código de ejemplo y explicaciones detalladas.</string>
+    <string name="navigation_exercise_tips">• Asegúrate de tener Kotlin Serialization configurado\n• Usa @Serializable en todos los destinos\n• Prefiere toRoute&lt;T&gt;() sobre argumentos manuales\n• Organiza destinos relacionados en subgrafos</string>
+    <string name="exercise_tips_title">Consejos Importantes</string>
+    <string name="exercise_code_example">Ejemplo de Código</string>
+    
+    <!-- Help Section - New Strings -->
+    <string name="help_quick_section">Ayuda Rápida</string>
+    <string name="help_legal_section">Legal e Información</string>
+    
+    <!-- Help Screen Titles -->
+    <string name="help_guides_title">Guías de Usuario</string>
+    <string name="help_terms_title">Términos y Condiciones</string>
+    <string name="help_privacy_title">Política de Privacidad</string>
+    <string name="help_about_title">Acerca de MercaStock</string>
+    
+    <!-- Help Screen Descriptions -->
+    <string name="help_faq_description">Respuestas a las preguntas más frecuentes sobre el uso de MercaStock</string>
+    <string name="help_contact_description">Contacta con nuestro equipo de soporte técnico</string>
+    <string name="help_guides_description">Tutoriales paso a paso para aprovechar al máximo la aplicación</string>
+    <string name="help_terms_description">Lee nuestros términos de uso y condiciones del servicio</string>
+    <string name="help_privacy_description">Información sobre cómo protegemos y utilizamos tus datos</string>
+    <string name="help_about_description">Información sobre la aplicación, versión y desarrolladores</string>
+    
+    <!-- FAQ Content -->
+    <string name="faq_title">Preguntas Frecuentes</string>
+    <string name="faq_add_product_question">¿Cómo añado un nuevo producto?</string>
+    <string name="faq_add_product_answer">Pulsa el botón \'+\' en el dashboard.</string>
+    <string name="faq_edit_product_question">¿Cómo edito un producto?</string>
+    <string name="faq_edit_product_answer">Selecciona el producto y pulsa editar.</string>
+    
+    <!-- Contact Content -->
+    <string name="contact_title">Contacto y Soporte</string>
+    <string name="contact_email">📧 Email: soporte@mercastock.com</string>
+    <string name="contact_phone">📞 Teléfono: +34 900 123 456</string>
+    <string name="contact_hours">🕒 Horario: Lunes a Viernes, 9:00 - 18:00</string>
+    
+    <!-- Guides Content -->
+    <string name="guides_getting_started">• Primeros pasos con MercaStock</string>
+    <string name="guides_advanced">• Gestión avanzada de productos</string>
+    <string name="guides_reports">• Análisis y reportes</string>
+    
+    <!-- Terms Content -->
+    <string name="terms_usage">Al utilizar MercaStock, aceptas cumplir con estos términos y condiciones.</string>
+    <string name="terms_purpose">Esta aplicación está diseñada para la gestión de inventario y productos.</string>
+    
+    <!-- Privacy Content -->
+    <string name="privacy_data_collection">MercaStock recopila únicamente los datos necesarios para el funcionamiento de la aplicación.</string>
+    <string name="privacy_data_usage">Los datos se utilizan exclusivamente para proporcionar funcionalidad de gestión de inventario.</string>
+    
+    <!-- About Content -->
+    <string name="about_version">📱 Versión: 1.0.0</string>
+    <string name="about_build">🏗️ Build: 2024.03.001</string>
+    <string name="about_tech">⚡ Jetpack Compose + Clean Architecture</string>
+    <string name="about_development">👨‍💻 Desarrollado para formación en Jetpack Compose</string>
+    <string name="about_company">🏢 Programa de formación Mercadona</string>
+    <string name="about_day">🎯 Día 3: Navegación y Arquitectura</string>
+    
+    <!-- Nuevas cadenas encontradas en el código -->
+    <!-- Formulario de productos -->
+    <string name="form_save_button">Guardar Producto</string>
+    <string name="form_category_label">Categoría</string>
+    <string name="form_name_label">Nombre del producto</string>
+    <string name="form_name_hint">Ingresa el nombre del producto</string>
+    <string name="form_price_label">Precio (€)</string>
+    <string name="form_price_hint">Ingresa el precio en euros</string>
+    <string name="form_stock_label">Stock</string>
+    <string name="form_stock_decrease">-</string>
+    <string name="form_stock_increase">+</string>
+    
+    <!-- Alérgenos -->
+    <string name="allergens_title">Alérgenos</string>
+    <string name="allergen_new_label">Nuevo alérgeno</string>
+    <string name="allergen_new_placeholder">Ej: Gluten, Lactosa...</string>
+    <string name="allergen_add_button">Añadir</string>
+    <string name="allergen_gluten">Gluten</string>
+    <string name="allergen_lactose">Lactosa</string>
+    <string name="allergen_nuts">Frutos secos</string>
+    <string name="allergen_eggs">Huevos</string>
+    <string name="allergen_fish">Pescado</string>
+    <string name="allergen_soy">Soja</string>
+    
+    <!-- Categorías de productos -->
+    <string name="category_food">Alimentación</string>
+    <string name="category_drinks">Bebidas</string>
+    <string name="category_cleaning">Limpieza</string>
+    <string name="category_personal_hygiene">Higiene Personal</string>
+    <string name="category_home">Hogar</string>
+    <string name="category_pets">Mascotas</string>
+    
+    <!-- Validaciones -->
+    <string name="validation_name_required">El nombre es obligatorio</string>
+    <string name="validation_name_min_length">El nombre debe tener al menos 2 caracteres</string>
+    <string name="validation_name_capitalize">El nombre debe empezar con mayúscula</string>
+    <string name="validation_price_required">El precio es obligatorio</string>
+    <string name="validation_price_invalid_number">El precio debe ser un número válido</string>
+    <string name="validation_price_positive">El precio debe ser mayor que 0</string>
+    <string name="validation_stock_negative">El stock no puede ser negativo</string>
+    <string name="validation_category_required">La categoría es obligatoria</string>
+    <string name="validation_form_errors">Por favor, corrige los errores en el formulario</string>
+    
+    <!-- Mensajes del sistema -->
+    <string name="message_product_saved">Producto guardado exitosamente</string>
+    <string name="message_save_error">Error al guardar: %1$s</string>
+    <string name="message_unexpected_error">Error inesperado: %1$s</string>
+    <string name="message_load_error">Error al cargar producto: %1$s</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title_text">Dashboard</string>
+    <string name="dashboard_help_title">Ayuda</string>
+    <string name="dashboard_average_price">Precio Promedio</string>
+    <string name="dashboard_product_price_stock">€%1$s • Stock: %2$d</string>
+    <string name="dashboard_allergens_present">Alérgenos: %1$s</string>
+    
+    <!-- Previews y datos de ejemplo -->
+    <string name="preview_faq_title">Preguntas Frecuentes</string>
+    <string name="preview_product_example">Producto de ejemplo</string>
+    <string name="preview_price_example">9.99</string>
+    <string name="preview_category_general">General</string>
+    <string name="preview_search_empty"></string>
+    
+    <!-- Productos de ejemplo -->
+    <string name="sample_product_milk">Leche Entera</string>
+    <string name="sample_product_bread">Pan Integral</string>
+    <string name="sample_product_yogurt">Yogur Natural</string>
+    <string name="sample_product_apples">Manzanas Golden</string>
+    <string name="sample_product_oil">Aceite de Oliva</string>
+    <string name="sample_product_pasta">Pasta Italiana</string>
+    <string name="sample_product_cheese">Queso Manchego</string>
+    <string name="sample_product_tomatoes">Tomates Cherry</string>
+    
+    <!-- Categorías de ejemplo -->
+    <string name="sample_category_dairy">Lácteos</string>
+    <string name="sample_category_bakery">Panadería</string>
+    <string name="sample_category_fruits">Frutas</string>
+    <string name="sample_category_oils">Aceites</string>
+    <string name="sample_category_pasta">Pasta</string>
+    <string name="sample_category_vegetables">Verduras</string>
+    
+    <!-- Help Screen específicos -->
+    <string name="help_quick_help_title">Ayuda Rápida</string>
+    <string name="help_faq_item_title">Preguntas Frecuentes</string>
+    <string name="help_faq_item_desc">Respuestas a las preguntas más comunes sobre el uso de MercaStock</string>
+    <string name="help_contact_item_title">Contacto y Soporte</string>
+    <string name="help_contact_item_desc">Información de contacto y canales de soporte disponibles</string>
+    <string name="help_guides_item_title">Guías de Usuario</string>
+    <string name="help_guides_item_desc">Tutoriales paso a paso para aprovechar al máximo la aplicación</string>
+    <string name="help_terms_item_title">Términos y Condiciones</string>
+    <string name="help_terms_item_desc">Información legal y términos de uso de la aplicación</string>
+    <string name="help_privacy_item_title">Política de Privacidad</string>
+    <string name="help_privacy_item_desc">Cómo recopilamos, utilizamos y protegemos tus datos personales</string>
+    <string name="help_about_item_title">Acerca de MercaStock</string>
+    <string name="help_about_item_desc">Información sobre la versión, tecnologías y equipo de desarrollo</string>
+    
+    <!-- Nuevas strings para textos hardcodeados -->
+    <!-- About Screen -->
+    <string name="about_app_info_title">Información de la Aplicación</string>
+    <string name="about_last_update">📅 Última actualización: Marzo 2024</string>
+    <string name="about_development_title">Desarrollo</string>
+    <string name="about_technologies">🔧 Tecnologías: Kotlin, Compose, Hilt, Navigation</string>
+    <string name="about_features_title">Características</string>
+    <string name="about_feature_navigation">✨ Navegación type-safe con Kotlin Serialization</string>
+    <string name="about_feature_architecture">🏗️ Clean Architecture con Repository Pattern</string>
+    <string name="about_feature_design">🎨 Material Design 3 con Jetpack Compose</string>
+    <string name="about_feature_di">💉 Inyección de dependencias con Hilt</string>
+    <string name="about_feature_ui">📱 UI responsive y accesible</string>
+    <string name="about_thanks_title">Agradecimientos</string>
+    <string name="about_thanks_text">Gracias al equipo de formación de Mercadona por hacer posible este proyecto educativo y por promover las mejores prácticas en desarrollo Android.</string>
+    
+    <!-- Guides Screen -->
+    <string name="guides_available_title">Guías Disponibles</string>
+    <string name="guides_getting_started_desc">Aprende a configurar tu inventario inicial y añadir tus primeros productos al sistema.</string>
+    <string name="guides_advanced_desc">Descubre funciones avanzadas como categorías, proveedores y control de alérgenos.</string>
+    <string name="guides_reports_desc">Utiliza las estadísticas del dashboard para tomar decisiones informadas sobre tu inventario.</string>
+    <string name="guides_alerts_title">• Configuración de alertas</string>
+    <string name="guides_alerts_desc">Configura notificaciones para stock bajo, productos próximos a caducar y más.</string>
+    <string name="guides_best_practices_title">• Mejores prácticas</string>
+    <string name="guides_best_practices_desc">Consejos y trucos para optimizar tu flujo de trabajo con MercaStock.</string>
+    
+    <!-- Privacy Screen -->
+    <string name="privacy_data_collection_title">Recopilación de Datos</string>
+    
+    <!-- Contact Screen -->
+    <string name="contact_info_title">Información de Contacto</string>
+    <string name="contact_support_channels_title">Canales de Soporte</string>
+    <string name="contact_live_chat">💬 Chat en vivo: Disponible en horario laboral</string>
+    <string name="contact_tickets">📋 Tickets: Sistema de tickets para problemas complejos</string>
+    <string name="contact_knowledge_base">📚 Base de conocimiento: Artículos y tutoriales</string>
+    
+    <!-- Terms Screen -->
+    <string name="terms_usage_title">Términos de Uso</string>
+    <string name="terms_user_responsibilities_title">Responsabilidades del Usuario</string>
+    <string name="terms_user_responsibilities_text">Los usuarios son responsables de mantener la precisión de los datos ingresados y de usar la aplicación de manera apropiada.</string>
+    <string name="terms_liability_title">Limitaciones de Responsabilidad</string>
+    <string name="terms_liability_text">Esta aplicación se proporciona "tal como está" sin garantías de ningún tipo. El uso de la aplicación es bajo su propio riesgo.</string>
+    <string name="terms_modifications_title">Modificaciones</string>
+    <string name="terms_modifications_text">Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación.</string>
+    
+    <!-- Privacy Screen -->
+    <string name="privacy_data_usage_title">Uso de la Información</string>
+    <string name="privacy_data_protection_title">Protección de Datos</string>
+    <string name="privacy_data_protection_text">Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger sus datos personales contra el acceso no autorizado, alteración, divulgación o destrucción.</string>
+    <string name="privacy_user_rights_title">Derechos del Usuario</string>
+    <string name="privacy_user_rights_text">Tienes derecho a acceder, rectificar, suprimir y limitar el tratamiento de tus datos personales. También puedes solicitar la portabilidad de tus datos.</string>
+    <string name="privacy_contact_title">Contacto</string>
+    <string name="privacy_contact_text">Para cualquier consulta sobre esta política de privacidad, puedes contactarnos en: privacy@mercastock.com</string>
+    
+    <!-- FAQ Screen -->
+    <string name="faq_stock_control_question">¿Cómo funciona el control de stock?</string>
+    <string name="faq_stock_control_answer">El sistema actualiza automáticamente el stock cuando realizas operaciones. Puedes establecer alertas de stock mínimo.</string>
+    <string name="faq_preview_question">¿Cómo añado un nuevo producto?</string>
+    <string name="faq_preview_answer">Pulsa el botón \'+\' en el dashboard para acceder al formulario de creación de productos.</string>
+    
+    <!-- Accessibility Content Descriptions -->
+    <string name="accessibility_dashboard_screen">Pantalla principal del dashboard de productos</string>
+    <string name="accessibility_loading_products">Cargando productos</string>
+    <string name="accessibility_products_list">Lista de productos disponibles</string>
+    <string name="accessibility_create_new_product">Crear nuevo producto</string>
+    <string name="accessibility_add_product_icon">Añadir producto</string>
+    
+    <!-- Product Form Accessibility -->
+    <string name="accessibility_saving_product">Guardando producto</string>
+    <string name="accessibility_product_form">Formulario de producto</string>
+    <string name="accessibility_save_product">Guardar producto</string>
+    <string name="accessibility_name_field">Campo de nombre del producto</string>
+    <string name="accessibility_price_field">Campo de precio del producto en euros</string>
+    
+    <!-- Stock Control Accessibility -->
+    <string name="accessibility_decrease_stock">Disminuir stock</string>
+    <string name="accessibility_increase_stock">Aumentar stock</string>
+    <string name="accessibility_current_stock">Stock actual: %1$d unidades</string>
+    
+    <!-- Product Card Accessibility -->
+    <string name="accessibility_product_card">Producto %1$s, categoría %2$s, precio %3$s euros, stock %4$d unidades</string>
+    <string name="accessibility_product_card_with_allergens">Producto %1$s, categoría %2$s, precio %3$s euros, stock %4$d unidades, contiene alérgenos: %5$s</string>
+    <string name="accessibility_product_card_low_stock">Producto %1$s, categoría %2$s, precio %3$s euros, stock %4$d unidades, stock bajo</string>
+    <string name="accessibility_product_card_with_allergens_low_stock">Producto %1$s, categoría %2$s, precio %3$s euros, stock %4$d unidades, contiene alérgenos: %5$s, stock bajo</string>
+    <string name="accessibility_edit_product">Editar producto %1$s</string>
+    <string name="accessibility_delete_product">Eliminar producto %1$s</string>
+    
+    <!-- Accessibility State Descriptions -->
+    <string name="accessibility_state_loading">En proceso de carga</string>
+    <string name="accessibility_state_saving">En proceso de guardado</string>
+    <string name="accessibility_state_form_valid">Formulario válido</string>
+    <string name="accessibility_state_form_errors">Formulario con errores</string>
+    <string name="accessibility_state_list_empty">Lista vacía</string>
+    <string name="accessibility_state_products_available">%1$d productos disponibles</string>
+    <string name="accessibility_state_button_enabled">Habilitado</string>
+    <string name="accessibility_state_button_disabled_form_errors">Deshabilitado por errores en el formulario</string>
+    
+    <!-- Allergen Accessibility -->
+    <string name="allergen_present_description">Alérgeno %1$s presente en el producto</string>
+    <string name="allergen_absent_description">Alérgeno %1$s no presente en el producto</string>
+    <string name="allergen_remove_description">Eliminar alérgeno %1$s</string>
+    <string name="allergen_state_present">Presente</string>
+    <string name="allergen_state_absent">No presente</string>
+    <string name="allergen_checkbox_checked">Marcar %1$s como presente</string>
+    <string name="allergen_checkbox_unchecked">Marcar %1$s como no presente</string>
+    
+    <!-- Category Selector Accessibility -->
+    <string name="category_selector_description">Selector de categoría del producto</string>
+    <string name="category_selected_description">Categoría seleccionada: %1$s</string>
+    <string name="category_not_selected_description">Ninguna categoría seleccionada</string>
+    <string name="category_state_expanded">Menú desplegado</string>
+    <string name="category_state_collapsed">Menú contraído</string>
+    <string name="category_menu_description">Lista de categorías disponibles</string>
+    <string name="category_option_description">Seleccionar categoría %1$s</string>
+    
+    <!-- Product State Descriptions -->
+    <string name="product_state_available">Disponible</string>
+    <string name="product_state_low_stock">Stock bajo</string>
+    <string name="product_state_out_of_stock">Sin stock</string>
+    
+    <!-- Statistics Card Accessibility -->
+    <string name="statistics_card_description">Resumen del inventario: %1$d productos totales, valor total %2$.2f euros, %3$d productos con stock bajo</string>
+    <string name="statistics_state_warning">Atención requerida</string>
+    <string name="statistics_state_normal">Estado normal</string>
+    <string name="statistic_item_description">%1$s: %2$s</string>
+    <string name="statistic_item_warning_description">Alerta: %1$s: %2$s</string>
+    <string name="statistic_state_warning">Requiere atención</string>
+    
+    <!-- Stock Control Accessibility -->
+    <string name="stock_control_description">Control de stock, cantidad actual: %1$d unidades</string>
+    <string name="stock_state_empty">Sin stock</string>
+    <string name="stock_state_low">Stock bajo</string>
+    <string name="stock_state_normal">Stock normal</string>
+    <string name="stock_error_description">Error en stock: %1$s</string>
+    
+    <!-- Search Bar Accessibility -->
+    <string name="search_bar_description">Campo de búsqueda de productos</string>
+    <string name="search_state_active">Buscando: %1$s</string>
+    <string name="search_state_empty">Campo de búsqueda vacío</string>
+    
+</resources>
