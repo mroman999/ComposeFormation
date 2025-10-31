@@ -1,0 +1,76 @@
+package com.mercadona.mercastock.presentation.ui.components
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
+import com.mercadona.mercastock.dia3.R
+
+@Composable
+fun StockControl(
+    stock: Int,
+    onStockChange: (Int) -> Unit,
+    stockError: String = ""
+) {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(
+            text = stringResource(R.string.form_stock_label),
+            style = MaterialTheme.typography.labelMedium
+        )
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Button(
+                onClick = { if (stock > 0) onStockChange(stock - 1) },
+                enabled = stock > 0
+            ) {
+                Text(stringResource(R.string.form_stock_decrease))
+            }
+            
+            Text(
+                text = stock.toString(),
+                style = MaterialTheme.typography.headlineSmall,
+                modifier = Modifier.weight(1f),
+                textAlign = TextAlign.Center
+            )
+            
+            Button(
+                onClick = { onStockChange(stock + 1) }
+            ) {
+                Text(stringResource(R.string.form_stock_increase))
+            }
+        }
+        
+        if (stockError.isNotEmpty()) {
+            Text(
+                text = stockError,
+                color = MaterialTheme.colorScheme.error,
+                style = MaterialTheme.typography.bodySmall
+            )
+        }
+    }
+}
+
+@Composable
+@Preview
+fun StockControlPreview() {
+    MaterialTheme {
+        Surface {
+            StockControl(
+                stock = 10,
+                onStockChange = {},
+                stockError = ""
+            )
+        }
+    }
+}

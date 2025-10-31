@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding estándar -->
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    
+    <!-- Espaciado entre elementos -->
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large">12dp</dimen>
+    <dimen name="spacing_extra_large">16dp</dimen>
+    
+    <!-- Espaciado de contenido -->
+    <dimen name="content_spacing">16dp</dimen>
+    
+    <!-- Elevación de cards -->
+    <dimen name="card_elevation">4dp</dimen>
+    
+    <!-- Padding específico para items de alérgenos -->
+    <dimen name="allergen_item_padding">12dp</dimen>
+    
+    <!-- Tamaños de iconos -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    
+    <!-- Alturas mínimas -->
+    <dimen name="min_touch_target">48dp</dimen>
+    
+    <!-- Radios de esquinas -->
+    <dimen name="corner_radius_small">4dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_large">12dp</dimen>
+</resources>

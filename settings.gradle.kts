@@ -22,5 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "ComposeFormation"
 include(":dia1")
 include(":dia2")
-//include(":dia3")
+include(":dia3")
 //include(":dia4")
