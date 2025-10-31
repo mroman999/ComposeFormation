@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dia 2</string>
+    
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_products">Productos</string>
+    <string name="nav_add_product">Añadir Producto</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard - Inventario</string>
+    <string name="dashboard_total_products">Total Productos</string>
+    <string name="dashboard_low_stock">Stock Bajo</string>
+    <string name="dashboard_out_of_stock">Sin Stock</string>
+    <string name="dashboard_total_value">Valor Total</string>
+    
+    <!-- Products -->
+    <string name="products_title">Lista de Productos</string>
+    <string name="product_detail_title">Detalle del Producto</string>
+    <string name="search_products">Buscar productos...</string>
+    <string name="filter_by_category">Filtrar por categoría</string>
+    <string name="sort_by">Ordenar por</string>
+    
+    <!-- Product Details -->
+    <string name="product_stock">Stock: %1$d</string>
+    <string name="product_price">%1$s</string>
+    <string name="product_category">Categoría: %1$s</string>
+    <string name="product_supplier">Proveedor: %1$s</string>
+    <string name="product_barcode">Código de barras: %1$s</string>
+    <string name="product_low_stock_warning">¡Stock bajo!</string>
+    <string name="product_out_of_stock_warning">¡Sin stock!</string>
+    
+    <!-- Actions -->
+    <string name="action_add">Añadir</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_filter">Filtrar</string>
+    <string name="action_back">Volver</string>
+    
+    <!-- Messages -->
+    <string name="loading">Cargando...</string>
+    <string name="error_generic">Ha ocurrido un error</string>
+    <string name="error_network">Error de conexión</string>
+    <string name="no_products_found">No se encontraron productos</string>
+    <string name="product_added_success">Producto añadido correctamente</string>
+    <string name="product_updated_success">Producto actualizado correctamente</string>
+    <string name="product_deleted_success">Producto eliminado correctamente</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_product_image">Imagen del producto</string>
+    <string name="cd_search_icon">Icono de búsqueda</string>
+    <string name="cd_filter_icon">Icono de filtro</string>
+    <string name="cd_back_button">Botón volver</string>
+    <string name="cd_add_button">Botón añadir</string>
+    <string name="cd_scroll_to_top">Scroll to top</string>
+    
+    <!-- Día 2 - Advanced Product Form -->
+    <string name="dia2_title">Día 2: Formulario Avanzado de Productos</string>
+    
+    <!-- Product Form Components -->
+    <string name="product_name_field_label">Nombre del Producto *</string>
+    <string name="product_name_field_helper">Debe empezar por mayúscula</string>
+    <string name="product_price_field_label">Precio (€) *</string>
+    <string name="product_price_field_helper">Debe ser mayor que cero</string>
+    <string name="product_category_field_label">Categoría *</string>
+    <string name="stock_field_label">Stock *</string>
+    <string name="allergens_section_title">Alérgenos</string>
+    <string name="new_allergen_field_label">Nuevo Alérgeno</string>
+    <string name="new_allergen_field_placeholder">Ej: Sulfitos</string>
+    <string name="add_allergen_button">Añadir</string>
+    <string name="save_product_action">Guardar Producto</string>
+    <string name="new_product_title">Nuevo Producto</string>
+    
+    <!-- Validation Messages -->
+    <string name="validation_name_empty">El nombre no puede estar vacío</string>
+    <string name="validation_name_too_short">El nombre debe tener al menos 2 caracteres</string>
+    <string name="validation_name_must_start_uppercase">El nombre debe empezar por mayúscula</string>
+    <string name="validation_price_empty">El precio no puede estar vacío</string>
+    <string name="validation_price_invalid">El precio debe ser un número válido</string>
+    <string name="validation_price_must_be_positive">El precio debe ser mayor que cero</string>
+    <string name="validation_stock_negative">El stock no puede ser negativo</string>
+    <string name="validation_category_empty">Debe seleccionar una categoría</string>
+    
+    <!-- Advanced Form Features (Día 2) -->
+    <string name="form_status_title">Estado del Formulario</string>
+    <string name="form_score_label">Puntuación: %1$d</string>
+    <string name="form_valid">✅ Formulario válido</string>
+    <string name="form_invalid">❌ Formulario incompleto</string>
+    <string name="no_allergens_selected">Sin alérgenos seleccionados</string>
+    <string name="one_allergen_selected">1 alérgeno: %1$s</string>
+    <string name="multiple_allergens_selected">Varios alérgenos seleccionados</string>
+    <string name="saved_products_count">Productos guardados: %1$d</string>
+    <string name="load_allergens_action">Cargar Alérgenos</string>
+    <string name="reset_form_action">Resetear</string>
+    <string name="form_reset_message">Formulario reseteado</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_delete_allergen">Eliminar alérgeno</string>
+    <string name="cd_decrement_stock">Disminuir stock</string>
+    <string name="cd_increment_stock">Aumentar stock</string>
+    
+    <!-- Buttons -->
+    <string name="decrement_button">-</string>
+    <string name="increment_button">+</string>
+</resources>
