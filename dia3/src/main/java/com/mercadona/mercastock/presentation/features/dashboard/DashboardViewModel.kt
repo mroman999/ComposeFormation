@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.mercadona.mercastock.domain.model.Product
 import com.mercadona.mercastock.domain.usecase.DeleteProductUseCase
 import com.mercadona.mercastock.domain.usecase.GetAllProductsUseCase
-import com.mercadona.mercastock.presentation.ui.components.SnackbarManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -15,7 +14,6 @@ import javax.inject.Inject
 class DashboardViewModel @Inject constructor(
     private val getAllProductsUseCase: GetAllProductsUseCase,
     private val deleteProductUseCase: DeleteProductUseCase,
-    private val snackbarManager: SnackbarManager,
 ) : ViewModel() {
     
     private val _searchQuery = MutableStateFlow("")
@@ -55,7 +53,7 @@ class DashboardViewModel @Inject constructor(
             try {
                 kotlinx.coroutines.delay(1000)
             } catch (e: Exception) {
-                snackbarManager.showSnackbar(message = e.message?: "Error")
+
             } finally {
                 _isLoading.value = false
             }
@@ -72,10 +70,10 @@ class DashboardViewModel @Inject constructor(
             try {
                 val result = deleteProductUseCase(productId)
                 if (result.isFailure) {
-                    snackbarManager.showSnackbar(message = result.exceptionOrNull()?.message?: "Error")
+
                 }
             } catch (e: Exception) {
-                snackbarManager.showSnackbar(message = e.message?: "Error")
+
             } finally {
                 _isLoading.value = false
             }

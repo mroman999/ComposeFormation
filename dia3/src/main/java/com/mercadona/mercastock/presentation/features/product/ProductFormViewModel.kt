@@ -10,8 +10,6 @@ import com.mercadona.mercastock.domain.model.Allergen
 import com.mercadona.mercastock.domain.model.Product
 import com.mercadona.mercastock.domain.usecase.GetProductByIdUseCase
 import com.mercadona.mercastock.domain.usecase.SaveProductUseCase
-import com.mercadona.mercastock.presentation.navigation.NavigationDestination
-import com.mercadona.mercastock.presentation.ui.components.SnackbarManager
 import com.mercadona.mercastock.utils.Constants
 import com.mercadona.mercastock.utils.ValidationUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,7 +26,6 @@ class ProductFormViewModel @Inject constructor(
     private val getProductByIdUseCase: GetProductByIdUseCase,
     private val saveProductUseCase: SaveProductUseCase,
     private val savedStateHandle: SavedStateHandle,
-    private val snackbarManager: SnackbarManager,
     @ApplicationContext private val context: Context,
 ) : ViewModel() {
 
@@ -44,8 +41,7 @@ class ProductFormViewModel @Inject constructor(
     val _uiState = MutableStateFlow<ProductFormUiState>(ProductFormUiState())
     val uiState: StateFlow<ProductFormUiState> = _uiState.asStateFlow()
 
-    private val productId: String? =
-        savedStateHandle.get<String>(NavigationDestination.ProductForm.PRODUCT_ID)
+    private val productId: String? = ""
 
     init {
         productId?.let { id ->
@@ -70,19 +66,10 @@ class ProductFormViewModel @Inject constructor(
                         allergens = product.allergens
                     )
                 }.onFailure { exception ->
-                    snackbarManager.showSnackbar(
-                        message = context.getString(
-                            R.string.error_loading_product,
-                            exception.message
-                        ),
-                        duration = SnackbarDuration.Long
-                    )
+
                 }
             } catch (e: Exception) {
-                snackbarManager.showSnackbar(
-                    message = context.getString(R.string.message_unexpected_error, e.message),
-                    duration = SnackbarDuration.Long
-                )
+
             } finally {
                 _isLoading.value = false
             }
@@ -141,10 +128,7 @@ class ProductFormViewModel @Inject constructor(
                 _uiState.value.category
             )
         ) {
-            snackbarManager.showSnackbar(
-                message = context.getString(R.string.validation_form_errors),
-                duration = SnackbarDuration.Long
-            )
+
             return
         }
 
@@ -161,23 +145,14 @@ class ProductFormViewModel @Inject constructor(
 
             val result = saveProductUseCase(product)
             result.onSuccess {
-                snackbarManager.showSnackbar(
-                    message = context.getString(R.string.message_product_saved),
-                    duration = SnackbarDuration.Long
-                )
+
                 _navigateBack.value = true
             }.onFailure { exception ->
-                snackbarManager.showSnackbar(
-                    message = context.getString(R.string.error_saving_product, exception.message),
-                    duration = SnackbarDuration.Long
-                )
+
                 _isLoading.value = false
             }
         } catch (e: Exception) {
-            snackbarManager.showSnackbar(
-                message = context.getString(R.string.message_unexpected_error, e.message),
-                duration = SnackbarDuration.Long
-            )
+
             _isLoading.value = false
         } finally {
         }
