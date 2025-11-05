@@ -37,6 +37,7 @@ class ProductFormViewModel @Inject constructor(
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
     private val _navigateBack = MutableStateFlow(false)
+    val navigateBack: StateFlow<Boolean> = _navigateBack.asStateFlow()
 
     //
     private val _currentProductId = MutableStateFlow<String?>(null)
@@ -67,7 +68,13 @@ class ProductFormViewModel @Inject constructor(
                         price = product.price.toString(),
                         stock = product.stock,
                         category = product.category,
-                        allergens = product.allergens
+                        allergens = product.allergens,
+                        isFormValid = isFormValid(
+                            product.name,
+                            product.price.toString(),
+                            product.stock,
+                            product.category
+                        )
                     )
                 }.onFailure { exception ->
                     snackbarManager.showSnackbar(
@@ -96,6 +103,16 @@ class ProductFormViewModel @Inject constructor(
             )
         }
         validateName(name)
+        _uiState.update {
+            it.copy(
+                isFormValid = isFormValid(
+                    uiState.value.name,
+                    uiState.value.price,
+                    uiState.value.stock,
+                    uiState.value.category
+                )
+            )
+        }
     }
 
     fun updatePrice(price: String) {
@@ -105,6 +122,16 @@ class ProductFormViewModel @Inject constructor(
             )
         }
         validatePrice(price)
+        _uiState.update {
+            it.copy(
+                isFormValid = isFormValid(
+                    uiState.value.name,
+                    uiState.value.price,
+                    uiState.value.stock,
+                    uiState.value.category
+                )
+            )
+        }
     }
 
     fun updateStock(stock: Int) {
@@ -114,6 +141,16 @@ class ProductFormViewModel @Inject constructor(
             )
         }
         validateStock(stock)
+        _uiState.update {
+            it.copy(
+                isFormValid = isFormValid(
+                    uiState.value.name,
+                    uiState.value.price,
+                    uiState.value.stock,
+                    uiState.value.category
+                )
+            )
+        }
     }
 
     fun updateCategory(category: String) {
@@ -123,12 +160,32 @@ class ProductFormViewModel @Inject constructor(
             )
         }
         validateCategory(category)
+        _uiState.update {
+            it.copy(
+                isFormValid = isFormValid(
+                    uiState.value.name,
+                    uiState.value.price,
+                    uiState.value.stock,
+                    uiState.value.category
+                )
+            )
+        }
     }
 
     fun updateAllergens(allergens: List<Allergen>) {
         _uiState.update {
             it.copy(
                 allergens = allergens
+            )
+        }
+        _uiState.update {
+            it.copy(
+                isFormValid = isFormValid(
+                    uiState.value.name,
+                    uiState.value.price,
+                    uiState.value.stock,
+                    uiState.value.category
+                )
             )
         }
     }
@@ -241,5 +298,4 @@ data class ProductFormUiState(
     val stockError: String = "",
     val categoryError: String = "",
     val isFormValid: Boolean = false,
-    val navigateBack: Boolean = false,
 )

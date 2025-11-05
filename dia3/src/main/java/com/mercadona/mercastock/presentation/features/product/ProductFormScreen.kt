@@ -41,9 +41,10 @@ fun ProductFormScreen(
 
     val uiState by viewModel.uiState.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
-    
-    LaunchedEffect(uiState.navigateBack) {
-        if (uiState.navigateBack) {
+    val navigateBack by viewModel.navigateBack.collectAsState()
+
+    LaunchedEffect(navigateBack) {
+        if (navigateBack) {
             onNavigateBack()
         }
     }
