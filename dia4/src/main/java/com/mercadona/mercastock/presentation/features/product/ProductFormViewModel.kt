@@ -38,6 +38,7 @@ class ProductFormViewModel @Inject constructor(
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
     private val _navigateBack = MutableStateFlow(false)
+    val navigateBack: StateFlow<Boolean> = _navigateBack.asStateFlow()
 
     //
     private val _currentProductId = MutableStateFlow<String?>(null)
@@ -68,7 +69,13 @@ class ProductFormViewModel @Inject constructor(
                         price = product.price.toString(),
                         stock = product.stock,
                         category = product.category,
-                        allergens = product.allergens
+                        allergens = product.allergens,
+                        isFormValid = isFormValid(
+                            name = product.name,
+                            price = product.price.toString(),
+                            stock = product.stock,
+                            category = product.category
+                        )
                     )
                 }.onFailure { exception ->
                     snackbarManager.showSnackbar(
@@ -188,7 +195,13 @@ class ProductFormViewModel @Inject constructor(
         val errorMessageId = ValidationUtils.validateName(name)
         _uiState.update {
             it.copy(
-                nameError = if (errorMessageId == 0) "" else context.getString(errorMessageId)
+                nameError = if (errorMessageId == 0) "" else context.getString(errorMessageId),
+                isFormValid = isFormValid(
+                    name = _uiState.value.name,
+                    price = _uiState.value.price.toString(),
+                    stock = _uiState.value.stock,
+                    category = _uiState.value.category
+                )
             )
         }
     }
@@ -197,7 +210,13 @@ class ProductFormViewModel @Inject constructor(
         val errorMessageId = ValidationUtils.validatePrice(price)
         _uiState.update {
             it.copy(
-                priceError = if (errorMessageId == 0) "" else context.getString(errorMessageId)
+                priceError = if (errorMessageId == 0) "" else context.getString(errorMessageId),
+                isFormValid = isFormValid(
+                    name = _uiState.value.name,
+                    price = _uiState.value.price.toString(),
+                    stock = _uiState.value.stock,
+                    category = _uiState.value.category
+                )
             )
         }
     }
@@ -206,7 +225,13 @@ class ProductFormViewModel @Inject constructor(
         val errorMessageId = ValidationUtils.validateStock(stock)
         _uiState.update {
             it.copy(
-                stockError = if (errorMessageId == 0) "" else context.getString(errorMessageId)
+                stockError = if (errorMessageId == 0) "" else context.getString(errorMessageId),
+                isFormValid = isFormValid(
+                    name = _uiState.value.name,
+                    price = _uiState.value.price.toString(),
+                    stock = _uiState.value.stock,
+                    category = _uiState.value.category
+                )
             )
         }
     }
@@ -215,7 +240,13 @@ class ProductFormViewModel @Inject constructor(
         val errorMessageId = ValidationUtils.validateCategory(category)
         _uiState.update {
             it.copy(
-                categoryError = if (errorMessageId == 0) "" else context.getString(errorMessageId)
+                categoryError = if (errorMessageId == 0) "" else context.getString(errorMessageId),
+                isFormValid = isFormValid(
+                    name = _uiState.value.name,
+                    price = _uiState.value.price.toString(),
+                    stock = _uiState.value.stock,
+                    category = _uiState.value.category
+                )
             )
         }
     }
@@ -242,5 +273,4 @@ data class ProductFormUiState(
     val stockError: String = "",
     val categoryError: String = "",
     val isFormValid: Boolean = false,
-    val navigateBack: Boolean = false,
 )

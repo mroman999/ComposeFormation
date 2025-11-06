@@ -31,6 +31,7 @@ import com.mercadona.mercastock.presentation.ui.components.CategorySelector
 import com.mercadona.mercastock.presentation.ui.components.NameField
 import com.mercadona.mercastock.presentation.ui.components.PriceField
 import com.mercadona.mercastock.presentation.ui.components.StockControl
+import com.mercadona.mercastock.presentation.ui.theme.MercaStockTheme
 import com.mercadona.mercastock.utils.Constants
 import kotlinx.coroutines.launch
 
@@ -43,9 +44,10 @@ fun ProductFormScreen(
 
     val uiState by viewModel.uiState.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
+    val navigateBack by viewModel.navigateBack.collectAsState()
     
-    LaunchedEffect(uiState.navigateBack) {
-        if (uiState.navigateBack) {
+    LaunchedEffect(navigateBack) {
+        if (navigateBack) {
             onNavigateBack()
         }
     }
@@ -187,7 +189,7 @@ fun ProductFormScreenContent(
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 private fun ProductFormScreenPreview() {
-    MaterialTheme {
+    MercaStockTheme {
         ProductFormScreenContent(
             uiState = ProductFormUiState(
                 name = stringResource(R.string.preview_product_example),
